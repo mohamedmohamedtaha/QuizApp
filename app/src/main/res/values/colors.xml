@@ -9,7 +9,7 @@
 
     <color name="secondary_text">#757575</color>
 
-    <color name="icons">#FFFFFF</color>
+    <color name="icons">@android:color/white</color>
 
     <color name="divider">#BDBDBD</color>
     <color name="red">#f20505</color>

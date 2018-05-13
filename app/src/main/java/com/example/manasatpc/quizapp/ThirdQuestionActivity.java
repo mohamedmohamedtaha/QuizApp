@@ -8,23 +8,24 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ThirdQuestionActivity extends AppCompatActivity {
     //Define two variable fot Track result The Student
     public static int mTrackResultCorrect;
     public static int mTrackResultUnCorrect;
     //Define Button for move The FourActivity
-    Button BTNext;
+    Button bt_next;
     //Define TextView for show Name Student
-    TextView ETShowYourName;
+    TextView tv_show_your_name;
     //Define Intent for bring Name Student from ThirdActivity and variables Result Student
     Intent intent;
     //Define String for store Name Student in it
     String showYourName;
     //Define EditText for Answer the Second Question
-    EditText ETNameMethod;
+    EditText et_name_method;
     //Define CheckBox for Answers the First Question
-    CheckBox checkBox1, checkBox2, checkBox3, checkBox4;
+    CheckBox check_box_one, check_box_two, check_box_three, check_box_four;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,23 +38,23 @@ public class ThirdQuestionActivity extends AppCompatActivity {
         //bring name Student ,variable mTrackResultCorrect and variable  mTrackResultUnCorrect
         // from SecondQuestionActivity and Show it name Student only in ETShowYourName
         intent = getIntent();
-        showYourName = intent.getStringExtra("yourName");
-        mTrackResultCorrect = intent.getIntExtra("mTrackResultCorrect", 0);
-        mTrackResultUnCorrect = intent.getIntExtra("mTrackResultUnCorrect", 1);
+        showYourName = intent.getStringExtra(getString(R.string.your_name));
+        mTrackResultCorrect = intent.getIntExtra(getString(R.string.m_track_result_correct), 0);
+        mTrackResultUnCorrect = intent.getIntExtra(getString(R.string.m_track_result_un_correct), 1);
 
-        ETShowYourName.setText(showYourName);
+        tv_show_your_name.setText(showYourName);
 
 
         //when press on Button Next
 
-        BTNext.setOnClickListener(new View.OnClickListener() {
+        bt_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //If statement for test Answer The First Question
                 //If checkBox1 is Checked  , checkBox2 is Checked,checkBox3 is Checked and checkBox4 is Checked
                 // Add 1 and store it in the Variable mTrackResultCorrect
 
-                if (checkBox1.isChecked() && checkBox2.isChecked() && checkBox3.isChecked() && checkBox4.isChecked()) {
+                if (check_box_one.isChecked() && check_box_two.isChecked() && check_box_three.isChecked() && check_box_four.isChecked()) {
                     mTrackResultCorrect++;
                 } else {
                     //else  Add 1 and store it in the Variable mTrackResultUnCorrect
@@ -64,8 +65,8 @@ public class ThirdQuestionActivity extends AppCompatActivity {
                 //If statement for test Answer The Second Question
                 //Define Variable String and Store it EdtetText ETNameMethod and test Do Student Write onCreate() or No
                 //If Yes Add 1 and store it in the Variable mTrackResultCorrect
-                String nameMethod = ETNameMethod.getText().toString().trim();
-                if (nameMethod.equals("onCreate()")) {
+                String nameMethod = et_name_method.getText().toString().trim();
+                if (nameMethod.equals(getString(R.string.on_create))) {
                     mTrackResultCorrect++;
 
 
@@ -78,10 +79,12 @@ public class ThirdQuestionActivity extends AppCompatActivity {
                 // Open FourQuestionActivity and bring with it YourName ,variable mTrackResultCorrect
                 // and Variable mTrackResultUnCorrect
                 Intent intent = new Intent(ThirdQuestionActivity.this, FourQuestionActivity.class);
-                intent.putExtra("yourName", showYourName);
-                intent.putExtra("mTrackResultCorrect", mTrackResultCorrect);
-                intent.putExtra("mTrackResultUnCorrect", mTrackResultUnCorrect);
+                intent.putExtra(getString(R.string.your_name), showYourName);
+                intent.putExtra(getString(R.string.m_track_result_correct), mTrackResultCorrect);
+                intent.putExtra(getString(R.string.m_track_result_un_correct), mTrackResultUnCorrect);
                 startActivity(intent);
+                Toast.makeText(ThirdQuestionActivity.this, getString(R.string.the_correct_answers) + " " + mTrackResultCorrect + "\n" +
+                        getString(R.string.in_correct_answers) + " " + mTrackResultUnCorrect, Toast.LENGTH_SHORT).show();
 
                 // For close the Activity after Start FourQuestionActivity
                 finish();
@@ -101,16 +104,16 @@ public class ThirdQuestionActivity extends AppCompatActivity {
         //method for define All views used in the Activity
         //and connect them with XML file
 
-        ETShowYourName = (TextView) findViewById(R.id.ETShowYourName);
+        tv_show_your_name = (TextView) findViewById(R.id.tv_show_your_name);
 
-        checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
-        checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
-        checkBox3 = (CheckBox) findViewById(R.id.checkBox3);
-        checkBox4 = (CheckBox) findViewById(R.id.checkBox4);
+        check_box_one = (CheckBox) findViewById(R.id.check_box_one);
+        check_box_two = (CheckBox) findViewById(R.id.check_box_two);
+        check_box_three = (CheckBox) findViewById(R.id.check_box_three);
+        check_box_four = (CheckBox) findViewById(R.id.check_box_four);
 
-        ETNameMethod = (EditText) findViewById(R.id.ETNameMethod);
+        et_name_method = (EditText) findViewById(R.id.et_name_method);
 
-        BTNext = (Button) findViewById(R.id.BTNext);
+        bt_next = (Button) findViewById(R.id.bt_next);
 
     }
 

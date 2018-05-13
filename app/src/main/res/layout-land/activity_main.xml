@@ -15,25 +15,26 @@
         android:src="@drawable/quiz" />
 
     <EditText
-        android:id="@+id/ETEnterName"
+        android:id="@+id/et_enter_name"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
-        android:hint="Enter Your Name"
+        android:hint="@string/enter_name"
+        android:inputType="textPersonName"
         android:textColor="@color/primary_text"
         android:textColorHint="@color/primary_text"
 
         />
 
     <Button
-        android:id="@+id/BTStartQuiz"
+        android:id="@+id/bt_start_quiz"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_shape"
-        android:text="Go"
+        android:text="@string/bt_go"
         android:textColor="@color/primary_text" />
 </LinearLayout>

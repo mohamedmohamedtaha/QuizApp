@@ -21,13 +21,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="Wellcome : "
+                android:text="@string/wellcome"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp"
                 android:textStyle="italic|bold" />
 
             <TextView
-                android:id="@+id/ETShowYourName"
+                android:id="@+id/tv_show_your_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -51,7 +51,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="10dp"
-            android:text="3- Who is the founder of Android ?"
+            android:text="@string/question_three"
             android:textColor="@color/primary_text"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -63,24 +63,22 @@
             android:layout_marginRight="16dp">
 
             <RadioButton
-                android:id="@+id/RBOne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Microsoft"></RadioButton>
+                android:text="@string/answer_one_question_three"></RadioButton>
 
             <RadioButton
-                android:id="@+id/RBTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Google">
+                android:text="@string/answer_two_question_three">
 
             </RadioButton>
 
             <RadioButton
-                android:id="@+id/RBThree"
+                android:id="@+id/rb_three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Andy Rubin">
+                android:text="@string/answer_three_question_three">
 
             </RadioButton>
         </RadioGroup>
@@ -100,7 +98,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="10dp"
-            android:text="4- From the list of componentsof Android application architecture?"
+            android:text="@string/question_four"
             android:textColor="@color/primary_text"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -113,46 +111,44 @@
             android:orientation="vertical">
 
             <CheckBox
-                android:id="@+id/checkBox1"
+                android:id="@+id/check_box_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Services" />
+                android:text="@string/answer_one_question_four" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
-
+                android:id="@+id/check_box_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Intent" />
+                android:text="@string/answer_two_question_four" />
 
             <CheckBox
-                android:id="@+id/checkBox3"
-
+                android:id="@+id/check_box_three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Notification" />
+                android:text="@string/answer_three_question_four" />
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/check_box_four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Content Providers" />
+                android:text="@string/answer_four_question_four" />
 
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/BTNext"
+            android:id="@+id/bt_next"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/button_shape"
-            android:text="Next"
+            android:text="@string/bt_next"
             android:textColor="@color/primary_text" />
 
     </LinearLayout>

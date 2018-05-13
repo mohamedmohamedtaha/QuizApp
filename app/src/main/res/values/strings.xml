@@ -1,3 +1,64 @@
 <resources>
     <string name="app_name">QuizApp</string>
+
+
+    <string name="wellcome">Wellcome : </string>
+    <string name="bt_next">Next</string>
+
+    <string name="your_name">yourName</string>
+    <string name="m_track_result_correct">mTrackResultCorrect</string>
+    <string name="m_track_result_un_correct">mTrackResultUnCorrect</string>
+
+
+    <!-- Strings in Main Activity and XML  -->
+    <string name="enter_name">Enter Your Name</string>
+    <string name="bt_go">Go</string>
+
+    <!-- Strings in activity_first_question -->
+
+    <string name="question_one">1- What does abbreviation mean IDE ?</string>
+    <string name="answer_one_question_one">Integrated Development Environment</string>
+    <string name="answer_two_question_one">Integrated Design Environment</string>
+    <string name="question_three_question_one">Initialised Developer Environment</string>
+
+    <string name="question_two">2- What is Android ?</string>
+    <string name="answer_one_question_two">Android is an open-source</string>
+    <string name="answer_two_question_two">linux-based operating system that is used in mobiles, tablets, televisions etc.</string>
+    <string name="answer_three_question_two">Used to perform background functionalities.</string>
+    <string name="answer_four_question_two">Used to perform the inter connection between activities and the data passing mechanism.</string>
+
+
+    <!-- Strings in activity_second_question -->
+
+
+    <string name="question_three">3- Who is the founder of Android ?</string>
+    <string name="answer_one_question_three">Microsoft</string>
+    <string name="answer_two_question_three">Google</string>
+    <string name="answer_three_question_three">Andy Rubin</string>
+
+    <string name="question_four">4- From the list of componentsof Android application architecture?</string>
+    <string name="answer_one_question_four">Services</string>
+    <string name="answer_two_question_four">Intent</string>
+    <string name="answer_three_question_four">Notification</string>
+    <string name="answer_four_question_four">Content Providers</string>
+
+    <!-- Strings in activity_third_question -->
+
+    <string name="question_five">5- What are the advantages of android?</string>
+    <string name="answer_one_question_five"> Platform-independent</string>
+    <string name="answer_two_question_five">Supports various technologies</string>
+    <string name="answer_three_question_five">Highly optimized Virtual Machine</string>
+    <string name="answer_four_question_five">Open-source</string>
+
+    <string name="question_six">6- What is the first method in the life cycle methods of robot activity?</string>
+    <string name="answer_one_question_six">Type the complete method</string>
+
+    <!-- Strings in activity_four_question -->
+    <string name="congratulation">Congratulations :</string>
+    <string name="the_correct_answers">The correct answers </string>
+    <string name="in_correct_answers">Incorrect answers </string>
+    <string name="bt_end">End</string>
+    <string name="on_create">onCreate()</string>
+
+
 </resources>

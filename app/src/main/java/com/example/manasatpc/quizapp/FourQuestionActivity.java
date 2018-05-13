@@ -13,9 +13,9 @@ public class FourQuestionActivity extends AppCompatActivity {
     //Define String for store name student
     String showYourName;
     //define TextView for show name Student , result Correct and result UnCorrect
-    TextView TVShowName, ETResultCorrect, ETResultUnCorrect;
+    TextView tv_show_your_name, et_result_correct, et_result_un_correct;
     //Define Button
-    Button BTEnd;
+    Button bt_end;
 
     //Define two variable fot Track result The Student
     int intentTrackResultCorrect;
@@ -32,17 +32,17 @@ public class FourQuestionActivity extends AppCompatActivity {
         //bring name Student ,variable mTrackResultCorrect and variable  mTrackResultUnCorrect
         // from ThridQuestionActivity and Show it name Student , intentTrackResultCorrect and intentTrackResultUnCorrect
         intent = getIntent();
-        showYourName = intent.getStringExtra("yourName");
-        intentTrackResultCorrect = intent.getIntExtra("mTrackResultCorrect", 0);
-        intentTrackResultUnCorrect = intent.getIntExtra("mTrackResultUnCorrect", 1);
+        showYourName = intent.getStringExtra(getString(R.string.your_name));
+        intentTrackResultCorrect = intent.getIntExtra(getString(R.string.m_track_result_correct), 0);
+        intentTrackResultUnCorrect = intent.getIntExtra(getString(R.string.m_track_result_un_correct), 1);
 
-        TVShowName.setText(showYourName);
-        ETResultCorrect.setText(intentTrackResultCorrect + "");
-        ETResultUnCorrect.setText(intentTrackResultUnCorrect + "");
+        tv_show_your_name.setText(showYourName);
+        et_result_correct.setText(intentTrackResultCorrect + "");
+        et_result_un_correct.setText(intentTrackResultUnCorrect + "");
 
         //when press on Button Next
 
-        BTEnd.setOnClickListener(new View.OnClickListener() {
+        bt_end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //For Close The App
@@ -60,10 +60,10 @@ public class FourQuestionActivity extends AppCompatActivity {
 
     private void defineViews() {
         //method for define All views used in the Activity
-        TVShowName = (TextView) findViewById(R.id.TVShowName);
-        ETResultCorrect = (TextView) findViewById(R.id.ETResultCorrect);
-        ETResultUnCorrect = (TextView) findViewById(R.id.ETResultUnCorrect);
-        BTEnd = (Button) findViewById(R.id.BTEnd);
+        tv_show_your_name = (TextView) findViewById(R.id.tv_show_your_name);
+        et_result_correct = (TextView) findViewById(R.id.et_result_correct);
+        et_result_un_correct = (TextView) findViewById(R.id.et_result_un_correct);
+        bt_end = (Button) findViewById(R.id.bt_end);
 
     }
 

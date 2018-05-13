@@ -9,8 +9,8 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     //Define Button  for Start Quiz and EditText for Enter Name Student
-    Button BTStartQuiz;
-    EditText ETEnterName;
+    Button bt_start_quiz;
+    EditText et_enter_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,23 +19,23 @@ public class MainActivity extends AppCompatActivity {
 
 
         //define EditText and Button and connect them with XML file
-        ETEnterName = (EditText) findViewById(R.id.ETEnterName);
-        BTStartQuiz = (Button) findViewById(R.id.BTStartQuiz);
+        et_enter_name = (EditText) findViewById(R.id.et_enter_name);
+        bt_start_quiz = (Button) findViewById(R.id.bt_start_quiz);
 
         //when Click on the Button Go for Start Quiz
-        BTStartQuiz.setOnClickListener(new View.OnClickListener() {
+        bt_start_quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // variable String for store ETEnterName EditText
-                String yourName = ETEnterName.getText().toString().trim();
+                String yourName = et_enter_name.getText().toString().trim();
                 //If statement for test Is EditText empty or No
                 if (yourName.isEmpty()) {
-                    ETEnterName.setError("Enter Your Name");
+                    et_enter_name.setError(getString(R.string.enter_name));
                     return;
                 } else {
                     //If EditText not Empty Start The Quiz
                     Intent startQuiz = new Intent(MainActivity.this, FisrtQuestionActivity.class);
-                    startQuiz.putExtra("yourName", yourName);
+                    startQuiz.putExtra(getString(R.string.your_name), yourName);
                     startActivity(startQuiz);
 
                     // For close the Activity after Start FisrtQuestionActivity

@@ -21,13 +21,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:text="Wellcome : "
+                android:text="@string/wellcome"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18sp"
                 android:textStyle="italic|bold" />
 
             <TextView
-                android:id="@+id/ETShowYourName"
+                android:id="@+id/tv_show_your_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -49,9 +49,8 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-
             android:layout_marginTop="10dp"
-            android:text="1- What does abbreviation mean IDE ?"
+            android:text="@string/question_one"
             android:textColor="@color/primary_text"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -63,24 +62,22 @@
             android:layout_marginRight="16dp">
 
             <RadioButton
-                android:id="@+id/RBOne"
+                android:id="@+id/rb_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Integrated Development Environment"></RadioButton>
+                android:text="@string/answer_one_question_one"></RadioButton>
 
             <RadioButton
-                android:id="@+id/RBTwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Integrated Design Environment">
+                android:text="@string/answer_two_question_one">
 
             </RadioButton>
 
             <RadioButton
-                android:id="@+id/RBThree"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Initialised Developer Environment">
+                android:text="@string/question_three_question_one">
 
             </RadioButton>
         </RadioGroup>
@@ -99,9 +96,8 @@
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-
             android:layout_marginTop="10dp"
-            android:text="2- What is Android ?"
+            android:text="@string/question_two"
             android:textColor="@color/primary_text"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -114,40 +110,40 @@
             android:orientation="vertical">
 
             <CheckBox
-                android:id="@+id/checkBox1"
+                android:id="@+id/check_box_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" Android is an open-source" />
+                android:text="@string/answer_one_question_two" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/check_box_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="linux-based operating system that is used in mobiles, tablets, televisions etc." />
+                android:text="@string/answer_two_question_two" />
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/check_box_three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Used to perform background functionalities." />
+                android:text="@string/answer_three_question_two" />
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/check_box_four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Used to perform the inter connection between activities and the data passing mechanism." />
+                android:text="@string/answer_four_question_two" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/BTNext"
+            android:id="@+id/bt_next"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/button_shape"
-            android:text="Next"
+            android:text="@string/bt_next"
             android:textColor="@color/primary_text" />
 
 
